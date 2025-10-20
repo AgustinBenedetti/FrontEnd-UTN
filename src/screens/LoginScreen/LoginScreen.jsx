@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router";
-import Login from "../../Components/Login/login";
+import Login from "../../Components/Login/Login";
 
 
 const LoginScreen = () => {
