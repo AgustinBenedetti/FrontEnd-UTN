@@ -60,7 +60,7 @@ export async function login (email, password){
     }
     
     catch(error){
-        console.error('Error al registrar:', error)
+        console.error('Error al iniciar sesion:', error)
         throw new Error('Error interno del servidor')
     }
 }

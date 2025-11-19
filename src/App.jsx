@@ -4,6 +4,7 @@ import RegisterScreen from './screens/RegisterScreen/RegisterScreen'
 import HomeScreen from './screens/HomeScreen/HomaScreen'
 import { Route, Routes } from 'react-router'
 import AuthMiddleware from './Middleware/AuthMiddleware.jsx'
+import WorkspaceScreen from './screens/WorkspaceScreen/WorkspaceScreen.jsx'
 
 
 
@@ -18,6 +19,8 @@ function App() {
         <Route path="/register" element={<RegisterScreen/>} />
         <Route element={<AuthMiddleware/>}>
           <Route path="/home" element={<HomeScreen />} />
+          <Route path="/workspace/:workspace_id" element={<WorkspaceScreen />} />
+          <Route path="/workspace/:workspace_id/:channel_id" element={< WorkspaceScreen/>} />
         </Route>
       </Routes>
     </div>
