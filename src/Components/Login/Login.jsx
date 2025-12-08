@@ -59,7 +59,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="login__logo">
-        <img src="/public/images/slack-loginpng.png" alt="logo-Slack" />
+        <img src="/public/images/slack-login.png" alt="logo-Slack" />
       </div>
       {/* Tabs SIGN IN / SIGN UP */}
       <div className="login__tabs">

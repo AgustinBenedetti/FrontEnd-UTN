@@ -38,7 +38,7 @@ const Register = () => {
   return (
     <div className="register">
         <div className="register__logo">
-            <img src="/public/images/slack-loginpng.png" alt="logo-Slack" />
+            <img src="/public/images/slack-login.png" alt="logo-Slack" />
         </div>
         {/* Tabs SIGN IN / SIGN UP */}
         <div className="register__tabs">
