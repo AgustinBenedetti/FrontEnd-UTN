@@ -1,0 +1,54 @@
+.workspace-screen {
+  height: 100vh;           
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #370e3b;
+  color: #f9fafb;
+  overflow: hidden;        
+}
+
+.workspace-header {
+  height: 56px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f1024;
+  border-bottom: 1px solid #4f3155;
+}
+
+.workspace-header__back-button {
+  background: transparent;
+  border: none;
+  color: #cfc9d9;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.workspace-header__back-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.workspace-header__invite-button {
+  background: #7c3aed;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.workspace-header__invite-button:hover {
+  background: #6d28d9;
+}
+
+.workspace-layout {
+  flex: 1;
+  display: flex;
+  min-height: 0;       
+}

@@ -1,0 +1,30 @@
+:root {
+  --bg-main: #370e3b;
+  --bg-card: #ffffff;
+  --bg-card-soft: #f9fafb;
+  --text-main: #1d1c1d;
+  --text-muted: #616061;
+  --primary: #7C3AED;
+  --primary-hover: #6b21a8;
+}
+
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* opcional pero recomendable */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: var(--text-main);
+}

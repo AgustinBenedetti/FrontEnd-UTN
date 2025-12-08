@@ -5,6 +5,7 @@ import HomeScreen from './screens/HomeScreen/HomaScreen'
 import { Route, Routes } from 'react-router'
 import AuthMiddleware from './Middleware/AuthMiddleware.jsx'
 import WorkspaceScreen from './screens/WorkspaceScreen/WorkspaceScreen.jsx'
+import './App.css'
 
 
 

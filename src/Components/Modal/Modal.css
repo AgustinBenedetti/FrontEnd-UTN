@@ -1,0 +1,128 @@
+/* Fondo oscuro difuminado detrás */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Caja principal del modal */
+.modal {
+  width: 100%;
+  max-width: 460px;
+  background-color: #1a1d21; /* 👈 tu color elegido */
+  color: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  animation: modalIn 0.18s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #16181c;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Botón cerrar */
+.modal-close {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: #9ca3af;
+  transition: 0.15s ease;
+}
+
+.modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f3f4f6;
+}
+
+/* Cuerpo del modal */
+.modal-body {
+  padding: 20px;
+}
+
+/* Inputs dentro del modal */
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+  width: 100%;
+  background-color: #111214;
+  color: #f3f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.15s ease;
+}
+
+.modal-body input:focus,
+.modal-body select:focus,
+.modal-body textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 1px #8b5cf6;
+}
+
+/* Botón submit dentro del modal */
+.modal-body button[type="submit"] {
+  padding: 8px 16px;
+  background-color: #8b5cf6;
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: 0.15s ease;
+}
+
+.modal-body button[type="submit"]:hover:not(:disabled) {
+  background-color: #7c3aed;
+}
+
+.modal-body button[type="submit"]:disabled {
+  opacity: 0.45;
+}
+
+/* Animación */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .modal {
+    margin: 16px;
+  }
+}

@@ -1,0 +1,100 @@
+.channel-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background-color: #1a1d21;
+  color: #e5e7eb;
+  position: relative; /* 👈 para posicionar el pill */
+}
+
+.channel-main__header {
+  padding: 15px 20px 15px;
+  border-bottom: 1px solid #35373b;
+  display: flex;
+  align-items: center;
+}
+
+.channel-main__hash {
+  opacity: 0.6;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.channel-main__title {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Vista vacía */
+.channel-main--empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1d21;
+  color: #9ca3af;
+  font-size: 50px;
+}
+
+/* Zona de mensajes (scrollable) */
+.channel-main__messages {
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+  background-color: #1a1d21;
+}
+
+.channel-main__messages::-webkit-scrollbar {
+  width: 10px;      
+}
+
+.channel-main__messages::-webkit-scrollbar-track {
+  background: transparent; /* casi invisible */
+}
+
+.channel-main__messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.20); /* gris suave */
+  border-radius: 10px;
+  border: 2px solid transparent; 
+  background-clip: padding-box; /* efecto borde fino */
+}
+
+.channel-main__messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.30);
+}
+
+/* Zona del input, fija abajo */
+.channel-main__input {
+  border-top: 1px solid rgba(15, 23, 42, 0.6);
+  padding: 10px 20px;
+  background: #1a1d21;
+}
+
+.channel-main__error {
+  color: #f97373;
+  font-size: 13px;
+}
+
+/* Pill "New messages ↓" */
+.channel-main__new-messages {
+  position: absolute;
+  right: 32px;
+  bottom: 70px; /* ajustalo según la altura del input */
+}
+
+.channel-main__new-messages button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: #7c3aed;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.channel-main__new-messages button:hover {
+  background: #6d28d9;
+}

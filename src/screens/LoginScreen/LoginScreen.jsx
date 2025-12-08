@@ -1,20 +1,15 @@
 import React from "react";
-import { useLocation } from "react-router";
 import Login from "../../Components/Login/Login";
-
+import "./LoginScreen.css"; 
 
 const LoginScreen = () => {
-
   return (
-    <div className="Container-login-screen">
-      <div className="Container-login">
-        <Login/>
+    <div className="login-screen">
+      <div className="login-screen__card">
+        <Login />
       </div>
-      
     </div>
-    
-  )
-}
+  );
+};
 
 export default LoginScreen;
-    

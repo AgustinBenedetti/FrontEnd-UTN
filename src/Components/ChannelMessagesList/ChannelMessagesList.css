@@ -1,0 +1,73 @@
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message-list--empty {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Cada mensaje: avatar + texto */
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+/* Avatar cuadrado tipo Slack */
+.message-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 80px;
+  background: #facc15; /* amarillo Slack-ish */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.message-avatar__initial {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+/* Cuerpo del mensaje */
+.message-row__body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Línea superior: nombre + hora */
+.message-row__header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.message-row__author {
+  font-weight: 600;
+  font-size: 14px;
+  color: #f9fafb;
+}
+
+.message-row__time {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* Texto del mensaje */
+.message-row__content {
+  font-size: 14px;
+  color: #e5e7eb;
+  margin-top: 2px;
+  white-space: pre-wrap;       
+  word-break: break-word;      
+  overflow-wrap: break-word;   
+  max-width: 100%; 
+}
+
+

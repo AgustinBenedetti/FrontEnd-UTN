@@ -1,0 +1,32 @@
+.channel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.channel-list--empty {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.channel-list__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #bba8c2;
+  font-size: 15px;
+}
+
+.channel-list__item:hover {
+  background-color: rgba(148, 163, 184, 0.18);
+}
+
+.channel-list__hash {
+  opacity: 0.6;
+  margin-right: 5px;
+  font-size: 20px;
+}

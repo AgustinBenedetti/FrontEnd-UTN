@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-import Register from '../../Components/Register/Register.jsx'
-
-
+import React from "react";
+import Register from "../../Components/Register/Register.jsx";
+import "./RegisterScreen.css"; 
 
 const RegisterScreen = () => {
+  return (
+    <div className="register-screen">
+      <div className="register-screen__card">
+        <Register />
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <Register/>
-        </div>
-    )
-}
-
-export default RegisterScreen
+export default RegisterScreen;
