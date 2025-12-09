@@ -9,7 +9,6 @@ const useForm = (initial_form_state, onSubmit) =>  {
         const field = event.target
         const field_name =  field.name
         const field_value = field.value
-o
         setFormState(
             (prevFormState) => {
                 return { ...prevFormState, [field_name]: field_value }
