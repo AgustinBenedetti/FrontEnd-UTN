@@ -8,16 +8,11 @@ export const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
     
-
     const navigation = useNavigate()
-    
-    //Datos de sesion
     const [user, setUser] = useState(null)
 
-    //Marca si esta o no logueado el usuario
     const [isLogged, setIsLogged] = useState(Boolean(localStorage.getItem(AUTH_TOKEN_KEY)))
     
-    //Una vez se monte el componente decofificar el token y guardar los datos de sesion
     useEffect(
         () => {
             if(!localStorage.getItem(AUTH_TOKEN_KEY)){

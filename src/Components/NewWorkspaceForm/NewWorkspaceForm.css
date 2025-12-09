@@ -29,14 +29,12 @@
   box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.3);
 }
 
-/* Error */
 .workspace-form__error {
   color: #dc2626;
   font-size: 13px;
   margin: 0;
 }
 
-/* Botón */
 .workspace-form__button {
   margin-top: 10px;
   background-color: #38bdf8;

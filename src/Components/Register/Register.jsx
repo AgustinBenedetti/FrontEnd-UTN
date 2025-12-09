@@ -40,7 +40,6 @@ const Register = () => {
         <div className="register__logo">
             <img src="/images/slack-login.png" alt="logo-Slack" />
         </div>
-        {/* Tabs SIGN IN / SIGN UP */}
         <div className="register__tabs">
             <Link to="/login">
                 <button className="register__tab">SIGN IN</button>
@@ -48,8 +47,6 @@ const Register = () => {
             <button className="register__tab register__tab--active">SIGN UP</button>
         </div>
 
-
-        {/* Formulario */}
         <form onSubmit={handleSubmit} className="register__form">
             <div className="register__field">
             <label htmlFor="Username" className="register__label">Username</label>

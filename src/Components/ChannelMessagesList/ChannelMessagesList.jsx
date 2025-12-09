@@ -14,7 +14,6 @@ const formatTime = (dateString) => {
   return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 };
 
-// Avatar SIEMPRE con inicial
 const MessageAvatar = ({ name }) => {
   const initial = getInitialFromName(name);
 
@@ -26,7 +25,7 @@ const MessageAvatar = ({ name }) => {
 };
 
 const ChannelMessagesList = ({ messages }) => {
-  const { channel_id, workspace_id } = useParams(); // por si lo necesitás luego
+  const { channel_id, workspace_id } = useParams(); 
 
   if (!messages || messages.length === 0) {
     return (

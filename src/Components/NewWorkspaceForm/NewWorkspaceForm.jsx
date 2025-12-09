@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createWorkspace } from "../../serivce/workspaceService";
-import "./NewWorkspaceForm.css"; // 👈 agregalo
+import "./NewWorkspaceForm.css"; 
 
 const NewWorkspaceForm = ({ onWorkspaceCreated }) => {
   const [name, setName] = useState("");

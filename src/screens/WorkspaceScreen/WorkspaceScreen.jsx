@@ -8,7 +8,7 @@ import Modal from "../../Components/Modal/Modal";
 import { ChannelsProvider } from "../../Context/ChannelContext";
 
 const WorkspaceScreen = () => {
-  const { workspace_id } = useParams();
+  const { workspace_id, channel_id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -19,8 +19,14 @@ const WorkspaceScreen = () => {
 
   const [openInvite, setOpenInvite] = useState(false);
 
-  function handleBack() {
-    navigate("/home"); // 🔙 AJUSTA si tu ruta es distinta
+  const isChannelSelected = !!channel_id || location.pathname.includes('/channel/');
+
+  function handleExitWorkspace() {
+    navigate("/home");
+  }
+
+  function handleBackToSidebar() {
+    navigate(`/workspace/${workspace_id}`);
   }
 
   return (
@@ -30,10 +36,23 @@ const WorkspaceScreen = () => {
         <header className="workspace-header">
           <button 
             className="workspace-header__back-button"
-            onClick={handleBack}
+            onClick={handleExitWorkspace}
+            title="Exit Workspace"
           >
             <i className="bi bi-arrow-left"></i>
           </button>
+
+          <div className="workspace-header__middle">
+            {isChannelSelected && (
+              <button 
+                className="workspace-header__channel-nav"
+                onClick={handleBackToSidebar}
+              >
+                <i className="bi bi-chevron-left"></i>
+                <span className="channel-nav-text">Channels</span>
+              </button>
+            )}
+          </div>
 
           <button
             className="workspace-header__invite-button"
@@ -43,7 +62,7 @@ const WorkspaceScreen = () => {
           </button>
         </header>
 
-        <div className="workspace-layout">
+        <div className={`workspace-layout ${isChannelSelected ? 'show-chat' : 'show-sidebar'}`}>
           <ChannelSidebar workspaceName={workspaceName} />
           <ChannelDetail />
         </div>

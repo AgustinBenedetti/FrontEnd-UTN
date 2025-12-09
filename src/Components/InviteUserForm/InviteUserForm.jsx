@@ -1,4 +1,3 @@
-// components/InviteUserForm/InviteUserForm.jsx
 import React, { useState } from "react";
 import { inviteUserToWorkspace } from "../../serivce/workspaceService";
 
@@ -46,7 +45,6 @@ const InviteUserForm = ({ workspaceId }) => {
         disabled={loading}
       />
 
-      {/* 👇 Selector de rol */}
       <select
         value={role}
         onChange={(e) => setRole(e.target.value)}

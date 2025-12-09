@@ -61,7 +61,6 @@ const Login = () => {
       <div className="login__logo">
         <img src="/images/slack-login.png" alt="logo-Slack" />
       </div>
-      {/* Tabs SIGN IN / SIGN UP */}
       <div className="login__tabs">
         <button className="login__tab login__tab--active">SIGN IN</button>
         <Link to="/register">
@@ -69,7 +68,6 @@ const Login = () => {
         </Link>
       </div>
 
-      {/* Formulario */}
       <form onSubmit={handleSubmit} className="login__form">
         <div className="login__field">
           <label htmlFor="Email" className="login__label"> Email </label>

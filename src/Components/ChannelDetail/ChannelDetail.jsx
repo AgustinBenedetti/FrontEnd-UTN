@@ -10,10 +10,7 @@ import { useChannels } from "../../Context/ChannelContext";
 const ChannelDetail = () => {
   const { channel_id, workspace_id } = useParams();
   const { channels } = useChannels();
-
   const { response, error, loading, sendRequest } = useFetch();
-
-  // 👇 estados y refs para scroll
   const [isAtBottom, setIsAtBottom] = useState(true);
   const [hasNewMessages, setHasNewMessages] = useState(false);
   const messagesContainerRef = useRef(null);
@@ -31,7 +28,6 @@ const ChannelDetail = () => {
     }
   }, [channel_id, workspace_id]);
 
-  // cada vez que cambias de canal, reseteamos estado de scroll
   useEffect(() => {
     setIsAtBottom(true);
     setHasNewMessages(false);
@@ -40,7 +36,6 @@ const ChannelDetail = () => {
 
   const messages = response?.data?.messages || [];
 
-  // 👇 autoscroll + "new messages" cuando llegan mensajes nuevos
   useEffect(() => {
     const container = messagesContainerRef.current;
     const count = messages.length;
@@ -51,10 +46,8 @@ const ChannelDetail = () => {
     }
 
     if (isAtBottom) {
-      // si estás abajo, scrollea siempre al último mensaje
       container.scrollTop = container.scrollHeight;
     } else {
-      // si NO estás abajo y llegan mensajes nuevos, mostramos el pill
       if (count > prevMessageCountRef.current) {
         setHasNewMessages(true);
       }
@@ -63,7 +56,7 @@ const ChannelDetail = () => {
     prevMessageCountRef.current = count;
   }, [messages, isAtBottom]);
 
-  // 👇 handler de scroll del contenedor
+
   function handleMessagesScroll() {
     const el = messagesContainerRef.current;
     if (!el) return;
@@ -79,7 +72,6 @@ const ChannelDetail = () => {
     }
   }
 
-  // si no hay canal seleccionado
   if (!channel_id) {
     return (
       <div className="channel-main channel-main--empty">
@@ -114,7 +106,6 @@ const ChannelDetail = () => {
         )}
       </div>
 
-      {/* Pill "New messages" cuando estás scrolleando arriba */}
       {hasNewMessages && (
         <div className="channel-main__new-messages">
           <button

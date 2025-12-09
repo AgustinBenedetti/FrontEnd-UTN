@@ -9,20 +9,17 @@
   color: #9ca3af;
 }
 
-/* Cada mensaje: avatar + texto */
 .message-row {
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
 
-
-/* Avatar cuadrado tipo Slack */
 .message-avatar {
   width: 36px;
   height: 36px;
   border-radius: 80px;
-  background: #facc15; /* amarillo Slack-ish */
+  background: #facc15; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,13 +32,11 @@
   color: #1f2937;
 }
 
-/* Cuerpo del mensaje */
 .message-row__body {
   display: flex;
   flex-direction: column;
 }
 
-/* Línea superior: nombre + hora */
 .message-row__header {
   display: flex;
   align-items: baseline;
@@ -59,7 +54,6 @@
   color: #9ca3af;
 }
 
-/* Texto del mensaje */
 .message-row__content {
   font-size: 14px;
   color: #e5e7eb;

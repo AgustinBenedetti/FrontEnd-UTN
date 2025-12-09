@@ -1,11 +1,11 @@
 .register {
-  padding: 24px 32px 0;
+  padding: 1.5rem 2rem 0;
 }
 
 .register__logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   user-select: none;
 }
 
@@ -13,24 +13,23 @@
   width: 100px;
 }
 
-/* Tabs SIGN IN / SIGN UP */
 .register__tabs {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 18px;
+  gap: 1rem;
+  margin-bottom: 1.125rem;
 
 }
 
 .register__tab {
   background: transparent;
   border: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-main);
-  padding-bottom: 4px;
+  padding-bottom: 0.25rem;
   cursor: pointer;
   position: relative;
 }
@@ -45,8 +44,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -2px;
-  height: 2px;
+  bottom: -0.125rem;
+  height: 0.125rem;
   margin: 0 auto;
   width: 60%;
   border-bottom: 2px solid #7C3AED;
@@ -54,19 +53,17 @@
   color: #7C3AED;
 }
 
-/* Espacio de avatar (puede quedar vacío) */
 .register__avatar-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
 }
 
-/* Formulario */
 .register__form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .register__field {
@@ -74,20 +71,19 @@
 }
 
 .register__label {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #493751;
-  margin-bottom: 6px;
-  margin-left: 5px;
+  margin-bottom: 0.375rem;
+  margin-left: 0.313rem;
   font-weight: 500;
   display: block;
   text-align: initial;
 }
 
-/* Inputs planitos */
 .register__input {
   width: 100%;
-  font-size: 14px;
-  padding: 10px 14px;
+  font-size: 0.875rem;
+  padding: 0.625rem 0.875rem;
   border-radius: 6px;
   border: none;
   background-color: #f3f4f6;
@@ -103,11 +99,10 @@
   box-shadow: 0 0 0 1px #38bdf8;
 }
 
-/* Botón */
 .register__button {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   width: 60%;
-  padding: 10px 12px;
+  padding: 0.625rem 0.75rem;
   border-radius: 6px;
   border: none;
   background-color: var(--primary);
@@ -115,7 +110,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 0.8125rem;
   cursor: pointer;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
@@ -124,17 +119,15 @@
   background-color: var(--primary-hover);
 }
 
-
 .register__button:disabled {
   opacity: 0.8;
   cursor: default;
 }
 
-/* Mensajes */
 .register__message {
   display: block;
-  font-size: 13px;
-  margin-top: 4px;
+  font-size: 0.8125rem;
+  margin-top: 0.25rem;
   text-align: center;
 }
 
@@ -146,17 +139,16 @@
   color: #16a34a;
 }
 
-/* Footer */
 .register__footer {
-  margin-top: 20px;
-  padding: 14px;
+  margin-top: 1.25rem;
+  padding: 0.875rem;
   text-align: center;
   border-radius: 0 0 12px 12px;
   user-select: none;
 }
 
 .register__footer-text {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #111827
 }
 
@@ -170,10 +162,9 @@
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
   .register {
-    padding: 20px 20px 0;
+    padding: 0.875rem;
   }
 
   .register__button {

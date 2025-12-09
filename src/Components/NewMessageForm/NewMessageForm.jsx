@@ -28,11 +28,10 @@ const NewMessageForm = ({ channelId, workspaceId, onMessageCreated }) => {
     }
   }
 
-  // 👇 Manejar ENTER y SHIFT+ENTER
   function handleKeyDown(e) {
     if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();    // evita salto de línea
-      handleSubmit();        // envía el mensaje
+      e.preventDefault();   
+      handleSubmit();        
     }
   }
 
@@ -56,7 +55,6 @@ const NewMessageForm = ({ channelId, workspaceId, onMessageCreated }) => {
         className="new-message-form__button"
         disabled={loading || !content.trim()}
       >
-        {/* Ícono siempre visible excepto si loading */}
         {!loading && <IoSend size={20} />}
       </button>
     </form>

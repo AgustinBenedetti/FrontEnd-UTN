@@ -1,4 +1,3 @@
-/* Fondo de la pantalla de register */
 .register-screen {
   min-height: 100vh;
   width: 100vw;
@@ -6,20 +5,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: var(--bg-main);
   background-image: radial-gradient(circle at top left, #4a154b 0, transparent 55%),
                     radial-gradient(circle at bottom right, #4a154b 0, transparent 55%);
   background-repeat: no-repeat;
-
   overflow: hidden;
 }
 
-
-/* Card blanca centrada */
 .register-screen__card {
   width: 100%;
-  max-width: 420px;
+  max-width: min(420px, 90vw);
   background-color: var(--bg-card);
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);

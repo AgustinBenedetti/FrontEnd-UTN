@@ -1,9 +1,6 @@
 import ENVIRONMENT from "../config/environment"
 import { AUTH_TOKEN_KEY } from "../Context/AuthContext"
 
-//GET api/workspace/:workspace_id/channel/:channel_id/messages
-//Obtener la lista de mensajes de un canal
-
 async function getMessagesByChannelId(channel_id, workspace_id) {
 
 const response_http = await fetch(

@@ -45,7 +45,6 @@ export async function inviteUserToWorkspace(workspace_id, email_invited, role_in
   return response;
 }
 
-// serivce/workspaceService.js
 export async function createWorkspace(url_image,workspace_name) {
   const response_http = await fetch(
     ENVIRONMENT.API_URL + "/api/workspace/",
